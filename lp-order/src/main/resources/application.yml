@@ -1,0 +1,18 @@
+server:
+  port: 8002 #服务端口
+#spring相关配置
+spring:
+  application:
+    name: service-order    #服务名
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 16fd1108-bb19-44ef-aba5-a8811a74c4eb
+      discovery:
+        group: DEFAULT_GROUP
+        server-addr: 127.0.0.1:8848
+        namespace: 16fd1108-bb19-44ef-aba5-a8811a74c4eb
+  config:
+    import:
+      - optional:nacos:service-order.yaml?group=DEFAULT_GROUP
