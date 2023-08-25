@@ -1,6 +1,6 @@
 spring:
   application:
-    name: service-order    #服务名
+    name: service-gateway    #服务名
   cloud:
     nacos:
       config:
@@ -12,4 +12,4 @@ spring:
         namespace: 16fd1108-bb19-44ef-aba5-a8811a74c4eb
   config:
     import:
-      - optional:nacos:service-order.yaml?group=DEFAULT_GROUP
+      - optional:nacos:service-gateway.yaml?group=DEFAULT_GROUP
